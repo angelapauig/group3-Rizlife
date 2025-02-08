@@ -164,12 +164,14 @@
     background: var(--palebrown);
     display: flex;
     justify-content: center;
+    box-sizing: border-box;  /* Include padding in the element's total width and height */
 }
 
 .introduction__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 1rem;
+    box-sizing: border-box;  /* Include padding in the element's total width and height */
 }
 
 .introduction__img {
@@ -196,8 +198,8 @@
     text-align: justify;
     color: var(--darkbrown);
     font-weight: 600;
-    width: 100%;
-    max-width: 100%;
+    width: 100%;  /* Adjust width to fit the content properly */
+    max-width: 100%;  /* Ensure the content doesn't exceed the screen size */
 }
 
 .fa-circle {
@@ -220,6 +222,7 @@
     
     .introduction__container {
         grid-template-columns: 1fr;
+        padding: 1rem;
     }
 
     .introduction__img {
@@ -231,7 +234,8 @@
     .introduction__p {
         font-size: clamp(1rem, 4vw, 1.2rem);  /* Adjusting the font size for smaller screens */
         width: 100%;  /* Adjust the width to fit the content properly */
-        max-width: 100%;  /* Ensures the content doesn't exceed the screen size */
+        max-width: 100%;  /* Ensure the content doesn't exceed the screen size */
+        box-sizing: border-box;  /* Include padding in the element's total width and height */
     }
 }
 
