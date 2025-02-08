@@ -24,14 +24,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar stays on top of other elements */
 }
 
 .navbar__logo {
     color: var(--yellow);
     text-decoration: none;
     padding-left: 1rem;  
-    font-size: 1.5rem;
+    font-size: 2.1rem;
+}
+
+.navbar__logo:hover {
+    color: var(--white);
 }
 
 .navbar__link {
@@ -108,7 +115,7 @@
 /* Hero Section */
 .hero {
     background: linear-gradient(to right, rgba(80, 57, 8, 0.418), rgba(63, 37, 2, 0.452)), url('https://s3-alpha-sig.figma.com/img/1c94/ce29/121bdfa1dd1bfa1cadba3dd92e53e79e?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=R9AMzBsNhEA8LiOf3VZy1E0VNsi63fuhFYyJSOZHj6REpkCJ8Pi3htCWdLtLJZXX09pxyRZZn0RgpB7m58vID2HUoDQzsG4cc72hgChuqPg9k697irdZ3FRSHw63~qrtp9vH50z7reaYXQ~~wqOM9RSf7dNKpcnM3qw9~r667jgb8aImBqEkxRgtR3czsEl2EdscE6zXXjmiiMREN-gQU3NNyJ0qPtCZ6l8zo27NKZXaK4vjO~HsgzBKUcCugTgCIKvar81EHHbFltOa1TCfYoklnZmlVgMcT7h~BETGrykMwyNA2BvnLIaIlnQ1M-S3S7t3141171h8yxWuYzppOg__');
-    height: 95vh;
+    height: 105vh;
     background-position: center;
     background-size: cover;
     padding: 0.5rem calc((100vw - 1200px)/2);
@@ -124,9 +131,14 @@
 }
 
 .hero__content h1 {
-    font-size: clamp(1.5rem, 8vw, 4.7rem);
-    margin-top: 15rem;
+    font-size: clamp(3rem, 4vw, 4rem);
+    margin-top: 14rem;
     margin-bottom: 0.5rem;
+}
+
+.hero__content p {
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    margin-bottom: 1rem;
 }
 
 .button {
@@ -237,7 +249,7 @@
 
 .bibliography__img {
     width: 90%;
-    height: 90%;
+    height: 95%;
     align-self: start; /* Align the image to the start of the container */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
