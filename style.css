@@ -53,14 +53,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
-    
     body.active {
         overflow-y: hidden;
         overflow-x: hidden;
@@ -170,6 +162,8 @@
 .introduction {
     padding: 8rem calc((100vw - 1200px) / 2) 1rem;
     background: var(--palebrown);
+    display: flex;
+    justify-content: center;
 }
 
 .introduction__container {
@@ -216,16 +210,10 @@
 }
 
 @media screen and (max-width: 768px) {
-    html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
-    
     .introduction__container {
         grid-template-columns: 1fr;
+        text-align: center;
+
     }
 
     .introduction__img {
@@ -304,16 +292,7 @@
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
-
-    html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
-    
+@media screen and (max-width: 768px) {    
     .bib__container {
         grid-template-columns: 1fr;
         text-align: center;
