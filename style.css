@@ -17,10 +17,6 @@
     font-family: 'Garamond';
 }
 
-body {
-    overflow-x: hidden;  /* Prevent horizontal scroll */
-}
-
 .navbar {
     background: var(--darkbrown);
     height: 60px;
@@ -212,6 +208,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;  /* Prevent horizontal scroll */
+    }
+    
     .introduction {
         padding: 8rem calc((100vw - 1200px) / 2);
         background: var(--palebrown);
