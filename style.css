@@ -161,9 +161,11 @@
 @media screen and (max-width: 768px) {
     .hero {
         padding: 8rem calc((100vw - 1200px) / 2);
-        background: var(--palebrown);
         overflow-x: hidden;  /* Prevent horizontal scroll */
         margin: 0;
+    }
+    .hero__content {
+        grid-template-columns: 1fr;
     }
 }
 
