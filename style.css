@@ -168,8 +168,10 @@ html, body {
 
 /* Introduction Section */
 .introduction {
-    padding: 8rem calc((100vw - 1200px) / 2);
+    padding: 8rem calc((100vw - 1200px) / 2) 1rem;
     background: var(--palebrown);
+    display: flex;
+    justify-content: center;
 }
 
 .introduction__container {
@@ -183,6 +185,7 @@ html, body {
     height: 85%;
     margin-right: 0;
     margin-left: 5rem;
+    padding: 1rem;
 }
 
 .introduction__heading {
@@ -201,6 +204,8 @@ html, body {
     text-align: justify;
     color: var(--darkbrown);
     font-weight: 600;
+    width: 100%;
+    max-width: 100%;
 }
 
 .fa-circle {
@@ -214,22 +219,30 @@ html, body {
 
 @media screen and (max-width: 768px) {
     html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;  /* Prevent horizontal scroll */
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
     }
     
     .introduction__container {
         grid-template-columns: 1fr;
     }
+
     .introduction__img {
         width: 85%;
         height: 100%;
         margin: auto;
     }
+    
+    .introduction__p {
+        font-size: clamp(1rem, 4vw, 1.2rem);  /* Adjusting the font size for smaller screens */
+        width: 100%;  /* Adjust the width to fit the content properly */
+        max-width: 100%;  /* Ensures the content doesn't exceed the screen size */
+    }
 }
+
 
 /* Bibliography Section */
 .bibliography {
