@@ -158,6 +158,15 @@
     background: var(--darkyellow);
 }
 
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 8rem calc((100vw - 1200px) / 2);
+        background: var(--palebrown);
+        overflow-x: hidden;  /* Prevent horizontal scroll */
+        margin: 0;
+    }
+}
+
 /* Introduction Section */
 .introduction {
     padding: 8rem calc((100vw - 1200px) / 2) 1rem;
@@ -208,15 +217,11 @@
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;  /* Prevent horizontal scroll */
-    }
-    
     .introduction {
         padding: 8rem calc((100vw - 1200px) / 2);
         background: var(--palebrown);
+        overflow-x: hidden;  /* Prevent horizontal scroll */
+        margin: 0;
     }
 
     .introduction__container {
